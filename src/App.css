@@ -1,0 +1,38 @@
+:root {
+  --sink: #FFF9C4; /* Sinking Pale Yellow */
+  --navy: #002147;
+  --aqua: #00FFFF;
+  --orange: #FF4500;
+  --pink: #FF1493;
+}
+
+body { background-color: var(--sink); margin: 0; font-family: 'Segoe UI', sans-serif; }
+
+/* Landing Layout */
+.landing-screen { text-align: center; padding-top: 100px; }
+.choice-grid { display: flex; justify-content: center; gap: 40px; }
+.portal-card { width: 320px; padding: 50px 20px; border-radius: 25px; cursor: pointer; transition: 0.4s; color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.portal-card.student { background: var(--pink); border: 4px solid var(--aqua); }
+.portal-card.admin { background: var(--navy); border: 4px solid var(--orange); }
+.portal-card:hover { transform: scale(1.08); }
+
+/* Auth Layout */
+.auth-bg { display: flex; justify-content: center; align-items: center; height: 100vh; }
+.auth-box { background: white; padding: 40px; border-radius: 20px; width: 350px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
+.back-btn { background: none; border: none; color: #999; cursor: pointer; position: absolute; top: 15px; left: 15px; font-weight: bold; }
+
+input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+.toggle { cursor: pointer; color: #666; text-align: center; margin-top: 20px; font-weight: bold; }
+
+/* Dashboard UI */
+.navbar { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: bold; }
+.pink-nav { background: var(--pink); border-bottom: 5px solid var(--aqua); }
+.navy-nav { background: var(--navy); border-bottom: 5px solid var(--orange); }
+
+.container { max-width: 850px; margin: 40px auto; padding: 0 20px; }
+.card { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+.btn { border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+.btn-navy { background: var(--navy); color: white; }
+.btn-pink { background: var(--pink); color: white; }
+.btn-orange { background: var(--orange); color: white; }
