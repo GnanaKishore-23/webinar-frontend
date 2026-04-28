@@ -1,8 +1,14 @@
 import axios from 'axios';
+const API = "http://localhost:8080/api";
 
-const API = "http://127.0.0.1:8080/api";
+export const authAPI = {
+    login: (data) => axios.post(`${API}/auth/login`, data),
+    signup: (data) => axios.post(`${API}/auth/signup`, data)
+};
 
-export const getWebinars = () => axios.get(API_URL);
-export const createWebinar = (data) => axios.post(API_URL, data);
-export const registerUser = (data) => axios.post(`${API_URL}/register`, data);
-export const updateResources = (id, data) => axios.put(`${API_URL}/${id}/resources`, data);
+export const webinarAPI = {
+    getAll: () => axios.get(`${API}/webinars`),
+    create: (data) => axios.post(`${API}/webinars`, data),
+    delete: (id) => axios.delete(`${API}/webinars/${id}`),
+    saveRecording: (id, url) => axios.post(`${API}/webinars/${id}/record`, { url })
+};
